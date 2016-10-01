@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="4dp">
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/notePicture"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_add_a_photo_black_24dp"/>
+
+
+            <ImageView
+                android:id="@+id/noteThumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/notePicture"
+                android:src="@android:drawable/arrow_down_float" />
+
+            <TextView
+                android:id="@+id/noteTitle"
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/noteThumbnail"
+                android:layout_toRightOf="@+id/noteThumbnail"
+                android:hint="Note Title"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/noteDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/noteTitle"
+                android:layout_toRightOf="@+id/noteThumbnail"
+                android:text="Date" />
+
+            <TextView
+                android:id="@+id/noteContent"
+                android:layout_width="200dp"
+                android:layout_height="20sp"
+                android:layout_below="@+id/noteDate"
+                android:layout_toRightOf="@+id/noteThumbnail"
+                android:text="Note content"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/noteContent"
+                android:layout_toRightOf="@+id/noteThumbnail"
+                android:backgroundTint="@color/colorDeleteButton"
+                android:text="Delete"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
